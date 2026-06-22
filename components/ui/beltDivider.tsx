@@ -6,17 +6,17 @@ export default function BeltDivider() {
   return (
     <>
       <style>{`
-.belt-divider {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  overflow: visible;
-}
+        .belt-divider {
+          position: relative;
+          width: 100%;
+          height: 340px; 
+          overflow: hidden; 
+        }
 
         .belt {
           position: absolute;
-          left: -10%;
-          width: 120%;
+          left: -25%; 
+          width: 150%;
           height: 56px;
           display: flex;
           align-items: center;
@@ -27,17 +27,25 @@ export default function BeltDivider() {
         }
 
         .belt-violet {
-          top: 42px;
+          top: 30px; 
           background: #7C3AED;
           transform: rotate(4deg);
           transform-origin: left center;
         }
 
         .belt-white {
-          top: 100px;
+          top: 90px; 
           background: #fff;
           transform: rotate(-4deg);
           transform-origin: right center;
+        }
+
+        .belt-black {
+          display: none; 
+          top: 140px; 
+          background: #000;
+          transform: rotate(3deg);
+          transform-origin: left center;
         }
 
         .belt-track {
@@ -54,6 +62,10 @@ export default function BeltDivider() {
 
         .belt-white .belt-track {
           animation: scrollRight 12s linear infinite;
+        }
+
+        .belt-black .belt-track {
+          animation: scrollLeft 14s linear infinite; 
         }
 
         .belt-item {
@@ -79,6 +91,10 @@ export default function BeltDivider() {
           color: #0e0e0e;
         }
 
+        .belt-black .belt-item {
+          color: #fff;
+        }
+
         .belt-violet .sep {
           color: #f5d90a;
           font-size: 18px;
@@ -89,21 +105,29 @@ export default function BeltDivider() {
           font-size: 18px;
         }
 
+        .belt-black .sep {
+          color: #fff;
+          font-size: 18px;
+        }
+
         @keyframes scrollLeft {
-          from {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(-30%);
-          }
+          from { transform: translateX(0); }
+          to { transform: translateX(-30%); }
         }
 
         @keyframes scrollRight {
-          from {
-            transform: translateX(-30%);
+          from { transform: translateX(-30%); }
+          to { transform: translateX(0); }
+        }
+
+        @media (max-width: 768px) {
+          .belt-black {
+            display: flex;
           }
-          to {
-            transform: translateX(0);
+          
+          .belt-divider {
+            /* FIX: Reduced height dramatically for mobile to center the belts */
+            height: 240px; 
           }
         }
       `}</style>
@@ -112,7 +136,7 @@ export default function BeltDivider() {
         <div className="belt belt-violet">
           <div className="belt-track">
             {[...items, ...items].map((_, i) => (
-              <span key={i} className="belt-item">
+              <span key={`v-${i}`} className="belt-item">
                 NEW <span className="sep">✦</span>
               </span>
             ))}
@@ -122,8 +146,18 @@ export default function BeltDivider() {
         <div className="belt belt-white">
           <div className="belt-track">
             {[...items, ...items].map((_, i) => (
-              <span key={i} className="belt-item">
-                NEW <span className="sep">+</span>
+              <span key={`w-${i}`} className="belt-item">
+                FRESH <span className="sep">+</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="belt belt-black">
+          <div className="belt-track">
+            {[...items, ...items].map((_, i) => (
+              <span key={`b-${i}`} className="belt-item">
+                DROP <span className="sep">✖</span>
               </span>
             ))}
           </div>

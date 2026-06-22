@@ -73,8 +73,7 @@ export default function NewArrivals() {
         </div>
 
         <Button
-          className="self-start md:self-auto border-2 border-black font-black uppercase tracking-widest text-sm px-6 py-5 rounded-none bg-main text-main-foreground hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform"
-          style={{ boxShadow: "4px 4px 0 #000" }}
+
         >
           View All →
         </Button>
