@@ -1,5 +1,5 @@
 "use client";
-
+import { X } from "lucide-react";
 export default function BeltDivider() {
   const items = Array.from({ length: 24 });
 
@@ -46,6 +46,9 @@ export default function BeltDivider() {
           background: #000;
           transform: rotate(3deg);
           transform-origin: left center;
+          border-top: 4px solid #fff;
+          border-bottom: 4px solid #fff;
+          box-shadow: 0 2px 0 #000, 0 -2px 0 #000;
         }
 
         .belt-track {
@@ -157,7 +160,7 @@ export default function BeltDivider() {
           <div className="belt-track">
             {[...items, ...items].map((_, i) => (
               <span key={`b-${i}`} className="belt-item">
-                DROP <span className="sep">✖</span>
+                DROP <span className="sep"><X strokeWidth={4}/></span>
               </span>
             ))}
           </div>
