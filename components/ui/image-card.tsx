@@ -18,7 +18,7 @@ export default function ImageCard({
   return (
     <figure
       className={cn(
-        `w-[250px] overflow-hidden rounded-base border-2 border-border bg-main font-base shadow-shadow transition-transform duration-300 ease-out hover:-translate-x-1 hover:-translate-y-2`,
+        `w-[280px] overflow-hidden rounded-base border-2 border-border bg-main font-base shadow-shadow transition-transform duration-300 ease-out hover:-translate-x-1 hover:-translate-y-2`,
         className
       )}
     >

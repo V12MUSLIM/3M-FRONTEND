@@ -8,7 +8,7 @@ const products = [
   {
     id: 1,
     name: "Air Void 01",
-    price: "$129",
+    price: "129",
     tag: "JUST IN",
     tagColor: "bg-[#FACC00] text-black",
     imageUrl:
@@ -17,7 +17,7 @@ const products = [
   {
     id: 2,
     name: "Phantom Low",
-    price: "$189",
+    price: "189",
     tag: "LIMITED",
     tagColor: "bg-main text-main-foreground",
     imageUrl:
@@ -26,7 +26,7 @@ const products = [
   {
     id: 3,
     name: "Neo Court",
-    price: "$99",
+    price: "99",
     tag: "NEW",
     tagColor: "bg-black text-white",
     imageUrl:
@@ -35,7 +35,7 @@ const products = [
   {
     id: 4,
     name: "Stark Runner",
-    price: "$155",
+    price: "155",
     tag: "HOT",
     tagColor: "bg-[#FF4D50] text-white",
     imageUrl:
@@ -44,7 +44,7 @@ const products = [
   {
     id: 30,
     name: "Neo Court",
-    price: "$99",
+    price: "99",
     tag: "NEW",
     tagColor: "bg-black text-white",
     imageUrl:
@@ -53,7 +53,7 @@ const products = [
   {
     id: 454,
     name: "Stark Runner",
-    price: "$155",
+    price: "155",
     tag: "HOT",
     tagColor: "bg-[#FF4D50] text-white",
     imageUrl:
@@ -62,7 +62,7 @@ const products = [
   {
     id: 42354,
     name: "Stark Runner",
-    price: "$155",
+    price: "155",
     tag: "HOT",
     tagColor: "bg-[#FF4D50] text-white",
     imageUrl:
@@ -71,7 +71,7 @@ const products = [
   {
     id: 42354254,
     name: "Stark Runner",
-    price: "$155",
+    price: "155",
     tag: "HOT",
     tagColor: "bg-[#FF4D50] text-white",
     imageUrl:
@@ -80,7 +80,7 @@ const products = [
   {
     id: 4235654,
     name: "Stark Runner",
-    price: "$155",
+    price: "155",
     tag: "HOT",
     tagColor: "bg-[#FF4D50] text-white",
     imageUrl:
@@ -89,7 +89,7 @@ const products = [
   {
     id: 4235454,
     name: "Stark Runner",
-    price: "$155",
+    price: "155",
     tag: "HOT",
     tagColor: "bg-[#FF4D50] text-white",
     imageUrl:
@@ -98,7 +98,16 @@ const products = [
   {
     id: 423245454,
     name: "Stark Runner",
-    price: "$155",
+    price: "155",
+    tag: "HOT",
+    tagColor: "bg-[#FF4D50] text-white",
+    imageUrl:
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80",
+  },
+  {
+    id: 42003245454,
+    name: "Stark Runner",
+    price: "155",
     tag: "HOT",
     tagColor: "bg-[#FF4D50] text-white",
     imageUrl:

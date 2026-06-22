@@ -1,8 +1,21 @@
+"use client"
 import Image from "next/image"
 import { Button } from "../ui/button"
-import { ArrowRight, Plus } from "lucide-react"
-
+import { ArrowRight, X } from "lucide-react"
+import { motion } from "motion/react"
 export default function Hero() {
+  const containerVariants = {
+    animate: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  }
+
+  const itemVariants = {
+    initial: { rotate: 0 },
+    animate: { rotate: 45 },
+  }
   return (
     <div className="py-`5 relative flex w-full flex-col-reverse items-start justify-between gap-8 px-6 md:flex-row md:gap-0 md:px-10 md:py-8">
       <div className="relative z-10 flex flex-1 flex-col justify-center gap-6">
@@ -15,22 +28,29 @@ export default function Hero() {
             <p>New drop</p>
           </div>
           <div className="flex gap-2">
-            <Plus strokeWidth={4} />
-            <Plus strokeWidth={4} />
-            <Plus strokeWidth={4} />
-            <Plus strokeWidth={4} />
-            <Plus strokeWidth={4} />
+            <motion.div
+              variants={containerVariants}
+              initial="initial"
+              animate="animate"
+              className="flex gap-2"
+            >
+              {[...Array(5)].map((_, i) => (
+                <motion.div key={i} variants={itemVariants}>
+                  <X strokeWidth={4} />
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
 
         <div className="flex flex-col">
-          <h1 className=" text-[clamp(3rem,8vw,9rem)] leading-none uppercase md:tracking-widest">
+          <h1 className="text-[clamp(3rem,8vw,9rem)] leading-none uppercase md:tracking-widest">
             Make
           </h1>
           <h1 className="text-[clamp(3rem,8vw,9rem)] leading-none uppercase md:tracking-widest">
             Your
           </h1>
-          <h1 className="text-[clamp(3rem,8vw,9rem)] leading-none font-heading text-main uppercase md:tracking-widest ">
+          <h1 className="text-[clamp(3rem,8vw,9rem)] leading-none font-heading text-main uppercase md:tracking-widest">
             Move.
           </h1>
         </div>
@@ -40,16 +60,16 @@ export default function Hero() {
         </p>
 
         <div className="flex max-w-lg flex-col flex-wrap gap-4">
-          <Button size="lg" >
+          <Button size="lg">
             Get Yours Now <ArrowRight />
           </Button>
           <Button size="sm" variant="noShadow" className="bg-white">
             Explore Sneakers
           </Button>
         </div>
-        <div className="hidden  grid-cols-3 flex-row gap-2 border-4 bg-black lg:grid max-w-md">
+        <div className="hidden max-w-md grid-cols-3 flex-row gap-2 border-4 bg-black lg:grid">
           <Image
-            src="/image-v2.png"
+            src="/image66.png"
             height={400}
             width={200}
             alt="shoe on green image"
