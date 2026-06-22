@@ -69,7 +69,7 @@ export default function Hero() {
         </div>
         <div className="hidden max-w-md grid-cols-3 flex-row gap-2 border-4 bg-black lg:grid">
           <Image
-            src="/image66.png"
+            src="/Image66.png"
             height={400}
             width={200}
             alt="shoe on green image"
