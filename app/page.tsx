@@ -4,6 +4,8 @@ import NewArrivals from "@/components/sections/newArrivals"
 import Categories from "@/components/sections/categories"
 import Reviews from "@/components/sections/reviews"
 import Discounts from "@/components/sections/discouns"
+import SpecialOffer from "@/components/sections/bigDeal"
+import EmailPromotions from "@/components/sections/emailPromotions"
 interface Category {
   _id: string
   name: string
@@ -34,10 +36,14 @@ export default async function Home() {
     <main>
       <Hero />
       <BeltDivider />
+
       <Discounts />
+      <SpecialOffer />
       <Categories />
+
       <NewArrivals />
       <Reviews />
+      <EmailPromotions/>
     </main>
   )
 }
